@@ -1,6 +1,12 @@
-# Yolo-Sinaliza-o-de-Transito
+# MOBILIDADE AUTONOMA
+## Procedimento Experiental 
+Nesta sera descrito o procedimento utilizado para configuração, treinamento, execução e analise dos modelos YOLO v8s, v10s e 11s, assim disponibilizado os arquivos utilizados.
 
-## 1-Comandos Instalação Framework ULTRALYTICS
+Preparação do Database [Procedimentos Realizados](./docs/preparacao_database.md)
+
+### 1-Configuração do Database
+
+### 1-Comandos Instalação Framework ULTRALYTICS
 
   A instalação do framework ULTRALYTICS é realizada por meio do comando apresentado abaixo.
 
@@ -29,7 +35,7 @@ sudo apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin dock
 docker run --runtime=nvidia --gpus all -it hailo_ai_sw_suite_2025-04:1 /bin/bash
 ```
   
-## 2-Comandos Instalação Framework ULTRALYTICS
+### 2-Comandos Instalação Framework ULTRALYTICS
 
 Após a configuração do ambiente, utilizei o script Python com
 o comando necessário para iniciar os treinamentos. Nesse script, foram ajustados
@@ -77,7 +83,7 @@ fundamentais, que avaliam a eficiência da rede neural na classificação de pla
 trânsito. As principais métricas consideradas incluem precisão (precision), acurácia
 (accuracy), matriz de confusão e F1 Score.
 
-## 3-Conversão para o modulo de aceleração Hailo
+### 3-Conversão para o modulo de aceleração Hailo
 
 Na etapa de conversão do modelo, foi realizada a conversão para o formato
 ONNX por meio de um script em Python abaxio. A única modificação
@@ -134,7 +140,7 @@ Dockercphailo_ai_sw_suite_2025-04_container:/local/workspace/yolo/yolov8s_coco/w
 
 
 
-
+[Texto do link](./caminho/para/seu/outro_arquivo.md)
 
 
 
