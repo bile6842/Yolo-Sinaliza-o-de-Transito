@@ -2,7 +2,15 @@
 ## Procedimento Experiental 
 Nesta sera descrito o procedimento utilizado para configuração, treinamento, execução e analise dos modelos YOLO v8s, v10s e 11s, assim disponibilizado os arquivos utilizados.
 
-Preparação do Database [Procedimentos Realizados](./docs/preparacao_database.md)
+### Etapa 1 - PC
+
+1-Preparação do Database [Procedimentos Realizados](./docs/preparacao_database.md)
+
+2-Preparação do ambiente de treinamento
+
+3-Trenamento
+
+### Etapa 2 - Raspberry pi 5
 
 ### 1-Configuração do Database
 
@@ -141,6 +149,166 @@ Dockercphailo_ai_sw_suite_2025-04_container:/local/workspace/yolo/yolov8s_coco/w
 
 
 [Texto do link](./caminho/para/seu/outro_arquivo.md)
+
+
+
+
+## Formação do Nome do Arquivo
+
+O nome dos nossos arquivos segue um padrão claro para facilitar a organização e identificação. Veja a estrutura:
+
+`ANO-MES-DIA_DESCRICAO-CURTA_VERSAO.EXTENSAO`
+
+Vamos analisar cada componente:
+
+* **`ANO`**: Representa o ano com 4 dígitos.
+    * *Exemplo:* `2025`
+* **`MES`**: Representa o mês com 2 dígitos.
+    * *Exemplo:* `06`
+* **`DIA`**: Representa o dia com 2 dígitos.
+    * *Exemplo:* `02`
+* **`_` (Sublinhado)**: Usado como separador principal entre blocos de informação (data, descrição, versão).
+* **`DESCRICAO-CURTA`**: Uma breve descrição do conteúdo do arquivo, usando hífens para separar palavras dentro da descrição.
+    * *Exemplo:* `relatorio-vendas`, `apresentacao-projeto`
+* **`VERSAO`**: Indica a versão do arquivo, geralmente prefixada com `v`.
+    * *Exemplo:* `v1`, `v2-final`, `v1.3`
+* **`.` (Ponto)**: Separa o nome base da extensão do arquivo.
+* **`EXTENSAO`**: Indica o tipo do arquivo.
+    * *Exemplo:* `pdf`, `docx`, `xlsx`, `png`
+
+**Nome de Arquivo Completo (Exemplo):**
+
+`2025-06-02_relatorio-vendas_v3.pdf`
+
+Onde:
+* Data: `2025-06-02`
+* Descrição: `relatorio-vendas`
+* Versão: `v3`
+* Extensão: `pdf`
+
+
+
+
+
+
+
+## Estrutura do Nome do Arquivo: `[DATA]_[TIPO]_[DETALHE]_[VERSAO].[EXT]`
+
+| Componente        | Formato/Exemplo              | Descrição                                       |
+|-------------------|------------------------------|-------------------------------------------------|
+| `[DATA]`          | `AAAA-MM-DD` (ex: `2025-06-02`) | Ano, Mês e Dia da criação ou relevância.        |
+| `_`               | (Sublinhado)                 | Separador entre componentes principais.          |
+| `[TIPO]`          | `RELATORIO`, `GRAFICO`, `CODIGO` | Categoria geral do arquivo.                     |
+| `_`               | (Sublinhado)                 | Separador.                                      |
+| `[DETALHE]`       | `VENDAS-MENSAIS`, `FLUXO-USUARIO` | Especificação do conteúdo. Use hífens.         |
+| `_`               | (Sublinhado)                 | Separador (opcional antes da versão).           |
+| `[VERSAO]`        | `v1`, `v2.1`, `final`        | Indicador de versão ou status do arquivo.       |
+| `.`               | (Ponto)                      | Separador da extensão.                          |
+| `[EXT]`           | `pdf`, `png`, `py`, `txt`    | Extensão que define o tipo de arquivo.          |
+
+**Exemplo Prático:**
+
+`2025-06-02_RELATORIO_VENDAS-MENSAIS_v1.pdf`
+
+
+  ````markdown
+  ## Estrutura do Projeto
+
+  ```
+  .
+  ├── README.md
+  ├── LICENSE
+  ├── docs
+  │   ├── CONTRIBUTING.md
+  │   ├── INSTALL.md
+  │   └── images
+  │       └── logo.png
+  ├── src
+  │   ├── main.py
+  │   └── utils
+  │       └── helpers.py
+  └── tests
+      └── test_main.py
+  ```
+  ````
+
+
+
+
+## Estrutura do Projeto
+
+- README.md (Este arquivo)
+- LICENSE
+- docs/
+  - CONTRIBUTING.md
+  - INSTALL.md
+  - images/
+    - logo.png
+- src/
+  - main.py
+  - utils/
+    - helpers.py
+- tests/
+  - test_main.py
+ 
+
+
+
+## Estrutura do Projeto
+
+-   `README.md` (Este arquivo)
+-   `LICENSE`
+-   `docs/`
+    -   `CONTRIBUTING.md`
+    -   `INSTALL.md`
+    -   `images/`
+        -   `logo.png`
+-   `src/`
+    -   `main.py`
+    -   `utils/`
+        -   `helpers.py`
+-   `tests/`
+    -   `test_main.py`
+
+
+
+A famosa equação de Einstein é $E = mc^2$.
+
+
+
+## Padrão de Nomenclatura de Arquivos de Relatório
+
+Os nomes dos arquivos de relatório seguem o formato:
+
+`<AAAA-MM-DD>_<ID_PROJETO>_<TIPO_RELATORIO>_v<VERSAO>.<EXT>`
+
+---
+
+**Componentes Variáveis:**
+
+| Variável                 | Formato Esperado           | Descrição                                                                 | Exemplo de Valor |
+|--------------------------|----------------------------|---------------------------------------------------------------------------|------------------|
+| `<AAAA-MM-DD>`           | Ano com 4 dígitos, Mês com 2 dígitos, Dia com 2 dígitos, separados por hífen. | Data de criação ou referência principal do relatório.                    | `2025-06-02`     |
+| `<ID_PROJETO>`           | Alfanumérico (ex: `PROJ103`) | Identificador único do projeto ao qual o relatório se refere.            | `XYZ789`         |
+| `<TIPO_RELATORIO>`       | Texto descritivo (ex: `Progresso`, `Financeiro`, `Final`) | Indica a natureza ou o tipo do relatório. Use CamelCase ou hífens. | `AnaliseRisco`   |
+| `<VERSAO>`               | Numérico (ex: `1`, `2`, `3.1`) | Número da versão do relatório, para controle de alterações.              | `2`              |
+| `<EXT>`                  | Extensão do arquivo        | Indica o formato do arquivo.                                              | `pdf`, `docx`    |
+
+---
+
+**Exemplos de Nomes de Arquivos Válidos:**
+
+* `2025-06-02_PROJ103_Progresso_v1.pdf`
+* `2025-05-15_ABC500_Financeiro_v3.xlsx`
+* `2025-07-01_XYZ789_AnaliseRisco_v1.2.docx`
+
+**Dicas para Clareza:**
+
+* **Seja Consistente:** Use sempre a mesma convenção para suas variáveis.
+* **Documente:** Mantenha esta explicação no seu `README.md` ou em um guia de contribuição (`CONTRIBUTING.md`).
+* **Use Separadores Claros:** Sublinhados (`_`) ou hífens (`-`) entre os componentes variáveis ajudam na legibilidade. Escolha um e mantenha-o.
+* **Evite Espaços:** Nomes de arquivos com espaços podem causar problemas em scripts ou na linha de comando.
+
 
 
 
