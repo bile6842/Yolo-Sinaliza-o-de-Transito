@@ -39,7 +39,7 @@ A Figura, descreve o fluxo do ambiente de treinamento dos modelos YOLO, que ante
 - [Comparatico entre os modelos](./docs/COMPARATIVO_ENTRE_OS_MODELOS.md)
 - [Conversão dos modelos](./docs/conversao_dos_modelos.md)
 - [Ambiente de Validação](./docs/ambiente_de_validacao.md)
-- [Resultados](./docs/Resultados)
-- [Conclusão](./docs/conclusao)
+- [Resultados](./docs/resultados.md)
+- [Conclusão](./docs/conclusao.md)
 
 
