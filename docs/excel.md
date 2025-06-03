@@ -324,3 +324,5 @@ Depois apliquei esta formula para contar os frames que nao foram identificados.
 ```text
 =CONT.SE(E:E;0)
 ```
+
+[Resultados](./resultados.md)
