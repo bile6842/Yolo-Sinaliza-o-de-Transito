@@ -35,5 +35,5 @@ docker run --runtime=nvidia --gpus all -it hailo_ai_sw_suite_2025-04:1 /bin/bash
 
 ## Treinamento da rede neural
 
-- [Treinamento da rede neural](./docs/Treinamento_da_rede_neural.md)
+- [Treinamento da rede neural](./Treinamento_da_rede_neural.md)
 
