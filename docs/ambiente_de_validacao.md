@@ -43,7 +43,46 @@ git clone https://github.com/hailo-ai/hailo-rpi5-exemples.git
 ```
 
 Foi modificado o `detection_simple.py` localizado em `hailo-rpi5-examples/basic_pipelines` fazendo que quando previse alguma classe realizava a extração das cordenadas e utlizava realizar um crop da area pervista salvando
-na extrutura de pasta abaixo, com a extrutua do nome do arquivo assim "video`_video`_frame`_frame`_label`_calsse`_conf`_confianã`.jpg" Exemplo de nome do arquivo `video_trajeto2_frame_7527_label_20km-h_conf_0.78.jpg`.
+na extrutura de pasta esta abaixo, com a extrutua do nome do arquivo assim "video`_video`_frame`_frame`_label`_calsse`_conf`_confianã`.jpg" Exemplo de nome do arquivo `video_trajeto2_frame_7527_label_20km-h_conf_0.78.jpg`.
+
+Após a clonagem do repositória foi criado uma pasta `tcc` para salvar os arquivos que servirão para os teste dentre eles os modelos YOLO, detection.py customizado e o label.json o Quadro mostra o arquivo label.json criado contendo os parâmetros.
+
+### label.json
+
+```json
+{ "iou_threshold": 0.45,
+  "detection_threshold": 0.7,
+  "max_boxes": 50,
+  "labels": [
+    "",
+    "100km-h",
+    "10km-h",
+    "110km-h",
+    "120km-h",
+    "20km-h",
+    "30km-h",
+    "40km-h",
+    "50km-h",
+    "60km-h",
+    "70km-h",
+    "80km-h",
+    "90km-h",
+    "Estacionamento",
+    "Lombada",
+    "Pare",
+    "Proibido Estacionar",
+    "Proibido Parar e Estacionar",
+    "Rotatoria"]}
+
+```
+Onde:
+
+- `iou_threshold` Este é o limiar de Intersecção sobre União (IoU). Durante a pós-processamento das detecções, se duas caixas delimitadoras (bounding boxes) previstas para o mesmo objeto tiverem um IoU maior que este valor, a caixa com menor pontuação de confiança é geralmente suprimida. Isso ajuda a evitar múltiplas detecções para um único objeto.
+- `detection_threshold` Este é o limiar de confiança da detecção. Somente as detecções com uma pontuação de confiança igual ou superior a este valor (neste caso, 70%) serão consideradas válidas. Detecções com confiança inferior a 0.7 serão descartadas. Este parâmetro é crucial para filtrar detecções fracas e reduzir falsos positivos.
+- `max_boxes` Define o número máximo de caixas delimitadoras (objetos detectados) que o modelo pode retornar por imagem processada.
+- `labels`  Esta lista contém os nomes das classes que o modelo foi treinado para detectar. A ordem dos rótulos nesta lista é importante, pois o índice de cada rótulo corresponde à saída numérica do modelo.
+O primeiro item é uma string vazia. Isso é comum e geralmente representa a classe de ´fundo´ (background) ou é um placeholder, indicando que o índice 0 não corresponde a um objeto de interesse específico.
+"100km-h", "10km-h", ..., "Rotatoria": São os nomes específicos das placas de trânsito e outros sinais que o modelo consegue identificar. Por exemplo, se o modelo detectar um objeto com o índice 1, ele será rotulado como "100km-h".
 
 ### detection modificado (detection.py)
 
@@ -204,15 +243,10 @@ if __name__ == "__main__":
   │   ├── 20km-h
   │   ├── 50km-h
   │   └── pare
-  │       └── video_trajeto7_frame_34261_label_Pare_conf_0.90.jpg
-          ├── video_trajeto7_frame_34262_label_Pare_conf_0.88.jpg
-          ├── video_trajeto7_frame_34263_label_Pare_conf_0.90.jpg
-  ├── src
-  │   ├── main.py
-  │   └── utils
-  │       └── helpers.py
-  └── tests
-      └── test_main.py
+  │       ├── video_trajeto7_frame_34261_label_Pare_conf_0.90.jpg
+  │       ├── video_trajeto7_frame_34262_label_Pare_conf_0.88.jpg
+  │       ├── video_trajeto7_frame_34263_label_Pare_conf_0.90.jpg
+ 
   ```
 
 -   `run/`
@@ -228,8 +262,38 @@ Onde:
 - `previsão` sempre que uma previsao acontece tem uma classe vinculada e o codigo utiliza o nome da classe para verificar se a pasta ja existe se nao existir ele cria uma pasta com o nome da classe.
 - `nome_do_crop.jpg` salva os crops na pastas correspondente a classe prevista.
 
+### 
+
+Após a conclusão da configuração, o script de criação do ambiente virtual foi executado. 
+Os comando correspondente está apresentado nos Quadros.
+
+1. Comando para executar o configurador do ambiente virtual
+```bash
+./install.sh
+```
+
+2. Executa o Ambiente Virtual
+```bash
+source setup env.sh
+```
+
+Em seguida, o script detection.py foi executado, especificando os parametros descritos abaixo. 
+caminho do modelo best.hef, o trajeto gravado e o arquivo label.json, garantindo a correta aplicação dos ajustes necessários para a detecção. 
+O comando correspondente está apresentado no Quadro.
+
+1. Comado para executar o modelo.hef
+```bash
+python3 tcc/detection.py --hef-path tcc/yolov8s_coco.hef –input ~/Desktop/trajeto2.mp4 --labels-json tcc/labels.json --show-fps
+```
+
+Onde:
+    python3 tcc/detection.py --hef-path `modelo.hef` –input `local_do_video` --labels-json `label.json` --show-fps
+
+- `modelo.hef` caminho do modelo best.hef.
+- `local_do_video` o trajeto gravado.
+- `label.json` e o arquivo ´label.json´.
 
 
+# Proximo Topico
 
-
-Após a clonagem do repositória foi criado uma pasta “tcc” para salvar os arquivos que servirão para os teste dentre eles os modelos YOLO, detection.py customizado e o label.json o Quadro 9 mostra o arquivo label.json criado contendo os parâmetros.
+- [Analise dos modelos nos trajetos](./analise_dos_modelos_nos_trajetos.md)
