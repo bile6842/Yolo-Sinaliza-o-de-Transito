@@ -34,5 +34,12 @@ A Figura, descreve o fluxo do ambiente de treinamento dos modelos YOLO, que ante
 
 - [Banco de imagens ](./docs/preparacao_database.md)
 - [Configuração do ambiente para treinamento YOLO](./docs/configuracao_do_ambiente_para_treinamento_yolo.md)
+- [Treinamento da rede neural](./docs/Treinamento_da_rede_neural.md)
+- [Metricas](./docs/metricas.md)
+- [Comparatico entre os modelos](./docs/COMPARATIVO_ENTRE_OS_MODELOS.md)
+- [Conversão dos modelos](./docs/conversao_dos_modelos.md)
+- [Ambiente de Validação](./docs/ambiente_de_validacao.md)
+- [Resultados](./docs/Resultados)
+- [Conclusão](./docs/conclusao)
 
 
