@@ -314,6 +314,13 @@ Apos as consultas criadas foi adicionado em cada panilha com o modelo que termin
 
 Exemplo ppara a planilha ´yolov8s_seed_background´ 
 ```text
-=CONT.SES('Dados Tratados 2'!A:A;yolov8s_seed_Bacground[[#Cabeçalhos];[yolov8s_seed]];'Dados Tratados 2'!B:B;[@Trajeto];'Dados Tratados 2'!C:C;[@Frame];'Dados Tratados 2'!D:D;[@True])
+=CONT.SES('Dados Tratados 2'!A:A;yolov8s_seed_Bacground[[#Cabeçalhos];[yolov8s_seed]];'Dados Tratados 2'!B:B;[@Trajeto];'Dados Tratados 2'!C:C;[@Frame])
 ```
 OBS: Em cada planilha de modelo vede modar o nome do modelo na formula para seu modelo.
+
+Depois apliquei esta formula para contar os frames que nao foram identificados.
+
+
+```text
+=CONT.SE(E:E;0)
+```
