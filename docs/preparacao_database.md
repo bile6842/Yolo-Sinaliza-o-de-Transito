@@ -24,4 +24,4 @@ Onde:
 
 ## Proximo Topico
 
-- [Configuração do ambiente para treinamento YOLO](./docs/configuracao_do_ambiente_para_treinamento_yolo.md)
+- [Configuração do ambiente para treinamento YOLO](./configuracao_do_ambiente_para_treinamento_yolo.md)
