@@ -25,3 +25,8 @@ Onde:
 ## Proximo Topico
 
 - [Configuração do ambiente para treinamento YOLO](./configuracao_do_ambiente_para_treinamento_yolo.md)
+- [Treinamento da rede neural](./Treinamento_da_rede_neural.md)
+- [Metricas](./metricas.md)
+- [Comparatico entre os modelos](./COMPARATIVO_ENTRE_OS_MODELOS.md)
+- [Conversão dos modelos](./conversao_dos_modelos.md)
+- [Ambiente de Validação](./ambiente_de_validacao.md)
