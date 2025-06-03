@@ -12,7 +12,7 @@ train: C:/Users/Otavi/Desktop/TCC Parte 2/TCC Certo Revisado/data/train/images
 val: C:/Users/Otavi/Desktop/TCC Parte 2/TCC Certo Revisado/data/validation/images
 
 nc: 18
-names: ['100km-h', '10km-h', '110km-h', '120km-h', '20km-h', '30km-h', '40km-h', '50km-h', '60km-h', '70km-h', '80km-h', '90km-h', 'Estacionamento', 'Lombada', 'Pare', 'Proibido Estacionar', 'Proibido Parar e Estacionar', 'Rotatoria'
+names: ['100km-h', '10km-h', '110km-h', '120km-h', '20km-h', '30km-h', '40km-h', '50km-h', '60km-h', '70km-h', '80km-h', '90km-h', 'Estacionamento', 'Lombada', 'Pare', 'Proibido Estacionar', 'Proibido Parar e Estacionar', 'Rotatoria']
 ```
 
 Onde:
