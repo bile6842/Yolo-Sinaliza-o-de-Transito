@@ -16,7 +16,7 @@ Para o desenvolvimento do projeto e experimentos, utilizou-se dos laboratórios 
 
 ![Equipmaento Montado](https://raw.githubusercontent.com/bile6842/Yolo-Sinaliza-o-de-Transito/refs/heads/main/img/Equipamento_Montado.png)
 
-As classes a serem treinadas são: a) 10 km/h, b) 20 km/h, c) 30 km/h, d) 40 km/h, e) 50 km/h, f) 60 km/h, g) 70 km/h, h) 80 km/h, i) 90 km/h, j) 100 km/h, k) 110 km/h, l) 120 km/h, m) Estacionamento, n) Lombada, o) p) Pare, q) Proibido Estacionar, r) Proibido Estacionar e Parar e s) Rotatória.
+As classes a serem treinadas são: a) 10 km/h, b) 20 km/h, c) 30 km/h, d) 40 km/h, e) 50 km/h, f) 60 km/h, g) 70 km/h, h) 80 km/h, i) 90 km/h, j) 100 km/h, k) 110 km/h, l) 120 km/h, m) Estacionamento, n) Lombada, o) Pare, p) Proibido Estacionar, q) Proibido Estacionar e Parar e r) Rotatória.
 
 ![Classes_Treinadas](https://raw.githubusercontent.com/bile6842/Yolo-Sinaliza-o-de-Transito/refs/heads/main/img/classes_treinadas.png)
 
