@@ -310,15 +310,15 @@ in
     Fonte
 ```
 
-Apos as consultas criadas foi adicionado em cada panilha com o modelo que terminava em `_background` a formula abaixo na coluna `E`.
+Apos as consultas criadas foi adicionado em cada planilha com o modelo que terminava em `_background` a formula abaixo na coluna `E`.
 
 Exemplo ppara a planilha ´yolov8s_seed_background´ 
 ```text
 =CONT.SES('Dados Tratados 2'!A:A;yolov8s_seed_Bacground[[#Cabeçalhos];[yolov8s_seed]];'Dados Tratados 2'!B:B;[@Trajeto];'Dados Tratados 2'!C:C;[@Frame])
 ```
-OBS: Em cada planilha de modelo vede modar o nome do modelo na formula para seu modelo.
+OBS: Em cada planilha de modelo deve mudar o nome do modelo na formula para seu modelo.
 
-Depois apliquei esta formula para contar os frames que nao foram identificados.
+Depois aplique esta formula para contar os frames que nao foram identificados.
 
 
 ```text
