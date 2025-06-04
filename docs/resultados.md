@@ -51,12 +51,12 @@ Os resultados obtidos na execução dos modelos no módulo de aceleração Hailo
 
 | Modelo         | Pré-treinado | Precisão | Acurácia | F1 Score |
 |----------------|--------------|----------|----------|----------|
-| Yolov8s_coco   | Sim          | 0,8279   | 0,9602   | 0,8342   |
-| Yolov8s_seed   | Não          | 0,8812   | 0,9298   | 0,6027   |
-| Yolov10s_coco  | Sim          | 0,7773   | 0,9251   | 0,5834   |
-| Yolov10s_seed  | Não          | 0,8088   | 0,9239   | 0,5680   |
-| Yolo11s_coco   | Sim          | 0,8459   | 0,9495   | 0,7681   |
-| Yolo11s_seed   | Não          | 0,8177   | 0,9280   | 0,6196   |
+| Yolov8s_coco   | Sim          | 0,8279   | 0,9593   | 0,8311   |
+| Yolov8s_seed   | Não          | 0,8812   | 0,9288   | 0,5993   |
+| Yolov10s_coco  | Sim          | 0,7773   | 0,9241   | 0,5802   |
+| Yolov10s_seed  | Não          | 0,8088   | 0,9230   | 0,5649   |
+| Yolo11s_coco   | Sim          | 0,8459   | 0,9486   | 0,7648   |
+| Yolo11s_seed   | Não          | 0,9298   | 0,9323   | 0,6197   |
 
 
 
